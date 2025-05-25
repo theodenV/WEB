@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="booking.css"> 
+</head>
+<body>
+    <header>
+        <h1>Забронируйте свое путешествие!</h1>
+    </header>
+    <main>
+        <p>
+            <label>
+                Ваше имя:
+                <input required type="text">
+            </label>
+        </p>
+        <p>
+            <label>
+                Ваш email:
+                <input required type="email">
+            </label>
+        </p>
+        <p>
+            <label>
+                Тип путешествия:
+                <select>
+                    <option>Пляжный отдых</option>
+                    <option>Экскурсионный тур</option>
+                    <option>Приключения</option>
+                    <option>Круиз</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label>
+                Количество путешественников:
+                <input type="number" step="1" min="0" placeholder="0">
+            </label>
+        </p>
+        <p>
+            <label>
+                Дата начала путешествия:
+                <input type="date">
+            </label>
+        </p>
+        <p>
+            <label>
+                Ваши пожелания:
+                <textarea rows="4" cols="50"></textarea>
+            </label>
+        </p>
+        <p>
+            <label>
+                Ваши пожелания:
+                <textarea rows="4" cols="50"></textarea>
+            </label>
+        </p>
+        <p>
+            <label>
+                Я согласен продать свою душу
+                <input type="checkbox" checked>
+            </label>
+        </p>
+        <button>Забронировать</button>
+    </main>
+</body>
+</html>

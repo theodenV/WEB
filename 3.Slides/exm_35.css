@@ -1,0 +1,16 @@
+.block {
+  text-align: center;
+  font-family: Arial;
+}
+
+.block .eee {
+  font-size: 20px;
+}
+
+.block .zzz {
+  font-size: 30px;
+}
+
+.block .ggg {
+  font-size: 35px;
+}

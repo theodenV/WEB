@@ -1,0 +1,65 @@
+/* Contacts page styles */
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.contact-item {
+    display: flex;
+    gap: 30px;
+    background-color: #D4BFA0;
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #C3A98A;
+}
+
+.contact-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-image {
+    transform: scale(1.05);
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.contact-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .contact-item {
+        flex-direction: column !important;
+    }
+    .contact-image {
+        width: 100%;
+        height: 250px;
+    }
+}

@@ -1,0 +1,71 @@
+body {
+    background: linear-gradient(135deg, rgb(77, 13, 82), rgb(230, 91, 230));
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 680px;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form select {
+    width: 104.3%;
+    padding: 10px;
+    margin: 10px 3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form input[type="radio"],
+.form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.form p {
+    margin: 15px 0 5px;
+}
+
+.form textarea {
+    height: 100px;
+}
+
+.form button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #b60db6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.form button:hover {
+    background-color: #6a006a;
+}

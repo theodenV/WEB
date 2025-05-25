@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Светлый голубой фон */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #007BFF; /* Синий цвет для заголовка */
+    text-align: center;
+    margin-top: 20px;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+ul li {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    display: inline-block;
+    background-color: #0056b3;
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-size: x-large;
+}
+
+a:hover {
+    background-color: #004494;
+}
+
+em {
+    color: #6a826c;
+    font-style: italic;
+}

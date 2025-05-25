@@ -1,0 +1,13 @@
+.block .header{
+  font-family: Arial;
+}
+
+.block h2.header {
+  font-size: 30px;
+  color: red;
+}
+
+.block h3.header {
+  font-size: 20px;
+  color: green;
+}
