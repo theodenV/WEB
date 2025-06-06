@@ -90,8 +90,8 @@ function showGameComplete() {
     resultDiv.style.display = 'flex';
     resultDiv.innerHTML = `
         <div class="success-message">
-            <h2>Поздравляем!</h2>
-            <p>Вы правильно определили все HEX-коды!</p>
+            <h2>Поздравляю!</h2>
+            <p>Тебе еще не надо к окулисту!</p>
             <button onclick="restartGame()" class="back-button">Начать заново</button>
         </div>
     `;
