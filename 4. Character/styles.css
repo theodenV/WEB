@@ -35,7 +35,6 @@ body {
     flex-direction: column;
 }
 
-/* Header section */
 .character-header {
     background: #4A2C2A;
     color: white;
@@ -70,7 +69,6 @@ body {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-/* Content section */
 .character-content {
     padding: 0 30px;
     display: flex;
@@ -81,7 +79,6 @@ body {
     flex: 1;
 }
 
-/* Image styling */
 .character-image {
     width: 400px;
     height: 400px;
@@ -95,7 +92,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Contact information */
 .contact-info {
     width: 100%;
     text-align: center;
@@ -135,7 +131,6 @@ body {
     font-size: 1.2em;
 }
 
-/* Biography section */
 .biography {
     width: 100%;
     margin: 20px 0;
@@ -169,7 +164,6 @@ body {
     margin-bottom: 0;
 }
 
-/* Abilities section */
 .abilities {
     width: 100%;
     margin-top: 20px;

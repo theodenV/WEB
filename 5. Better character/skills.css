@@ -93,7 +93,6 @@
     line-height: 1.6;
 }
 
-/* Contacts page styles */
 .contacts-container {
     display: flex;
     flex-direction: column;
@@ -149,7 +148,6 @@
     line-height: 1.6;
 }
 
-/* Page transitions */
 .character-card {
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -165,7 +163,6 @@
     }
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .contact-item {
         flex-direction: column !important;
