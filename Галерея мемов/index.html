@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мемная Галерея</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Мемная Галерея</div>
+            <div class="nav-links">
+                <button class="category-btn active" data-category="all">Все мемы</button>
+                <button class="category-btn" data-category="prehistoric">Доисторические</button>
+                <button class="category-btn" data-category="student">Студенческие</button>
+                <button class="category-btn" data-category="programming">Для программистов</button>
+                <button class="category-btn" data-category="kind">Добрые</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Поиск мемов...">
+                <i class="fas fa-search"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="meme-gallery" id="memeGallery">
+            <div class="meme-card" data-category="prehistoric">
+                <img src="Мемы/prehistoric1.jpg" alt="Апельсин">
+                <div class="meme-info">
+                    <h3>Апельсин</h3>
+                    <p>Грустная история об одиноком апельсине</p>
+                </div>
+            </div>
+            <div class="meme-card" data-category="prehistoric">
+                <img src="Мемы/prehistoric2.jpg" alt="Нельзя просто так взять и...">
+                <div class="meme-info">
+                    <h3>Нельзя просто так взять и...</h3>
+                    <p>Ну вот правда, нельзя</p>
+                </div>
+            </div>
+            <div class="meme-card" data-category="prehistoric">
+                <img src="Мемы/prehistoric3.jpg" alt="Троллинг">
+                <div class="meme-info">
+                    <h3>Троллинг</h3>
+                    <p>Все очень понятно!</p>
+                </div>
+            </div>
+
+            <div class="meme-card" data-category="student">
+                <img src="Мемы/student1.png" alt="Сейчас/раньше">
+                <div class="meme-info">
+                    <h3>Сейчас/раньше</h3>
+                    <p>Раньше было лучше</p>
+                </div>
+            </div>
+            <div class="meme-card" data-category="student">
+                <img src="Мемы/student2.jpg" alt="Самый лучший план">
+                <div class="meme-info">
+                    <h3>Самый лучший план</h3>
+                    <p>Надежный как швйецарские часы</p>
+                </div>
+            </div>
+            <div class="meme-card" data-category="student">
+                <img src="Мемы/student3.jpg" alt="Эволюция студента">
+                <div class="meme-info">
+                    <h3>Эволюция студента</h3>
+                    <p>Со всеми так</p>
+                </div>
+            </div>
+
+            <div class="meme-card" data-category="programming">
+                <img src="Мемы/programmer1.jpg" alt="Почему?">
+                <div class="meme-info">
+                    <h3>Почему?</h3>
+                    <p>Основной вопрос программирования</p>
+                </div>
+            </div>
+            <div class="meme-card" data-category="programming">
+                <img src="Мемы/programmer2.webp" alt="Не мой код">
+                <div class="meme-info">
+                    <h3>Не мой код</h3>
+                    <p>Не украл, а адаптировал</p>
+                </div>
+            </div>
+            <div class="meme-card" data-category="programming">
+                <img src="Мемы/programmer3.jpg" alt="Все дороги ведут в Гугл">
+                <div class="meme-info">
+                    <h3>Все дороги ведут в Гугл</h3>
+                    <p>А что, разве нет?</p>
+                </div>
+            </div>
+
+            <div class="meme-card" data-category="kind">
+                <img src="Мемы/kind1.jpg" alt="Безопасность">
+                <div class="meme-info">
+                    <h3>Безопасность</h3>
+                    <p>Добренько</p>
+                </div>
+            </div>
+            <div class="meme-card" data-category="kind">
+                <img src="Мемы/kind2.jfif" alt="Меньше негатива">
+                <div class="meme-info">
+                    <h3>Меньше негатива</h3>
+                    <p>Спасибо, хороший песик!</p>
+                </div>
+            </div>
+            <div class="meme-card" data-category="kind">
+                <img src="Мемы/kind3.jpg" alt="Майнкрафт dog">
+                <div class="meme-info">
+                    <h3>Майнкрафт dog</h3>
+                    <p>По-другому играть нельзя</p>
+                </div>
+            </div>
+
+            <div class="meme-card easter-egg" data-category="easter-egg" style="display: none;">
+                <img src="Мемы/easterEgg.png" alt="Секретный мем">
+                <div class="meme-info">
+                    <h3>Поздравляю!</h3>
+                    <p>Ты нашел пасхалку!</p>
+                    <p>Тебе бует везти весь год!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div class="modal" id="memeModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="meme-details">
+                <img src="" alt="" id="modalImage">
+                <div class="meme-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <p id="modalYear"></p>
+                    <p id="modalSource"></p>
+                    <div class="rating">
+                        <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span>0</span></button>
+                        <button class="dislike-btn"><i class="fas fa-thumbs-down"></i> <span>0</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

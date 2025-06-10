@@ -1,0 +1,452 @@
+:root {
+    --apple-gray: #2a2a35;
+    --apple-dark: #1a1a25;
+    --apple-blue: #0a84ff;
+    --apple-hover: #0077ed;
+    --text-primary: #ffffff;
+    --text-secondary: #8e8e93;
+    --card-bg: #32323e;
+    --nav-bg: rgba(60, 60, 75, 0.95);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--apple-gray);
+    background-image: linear-gradient(135deg, var(--apple-gray) 0%, #2a2a45 100%);
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.navbar {
+    background-color: var(--nav-bg);
+    backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.category-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+}
+
+.category-btn:hover {
+    opacity: 1;
+    color: var(--apple-blue);
+}
+
+.category-btn.active {
+    opacity: 1;
+    color: var(--apple-blue);
+}
+
+.search-container {
+    position: relative;
+}
+
+#searchInput {
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border: none;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    width: 200px;
+    transition: width 0.3s ease;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#searchInput::placeholder {
+    color: var(--text-secondary);
+}
+
+#searchInput:focus {
+    outline: none;
+    width: 250px;
+    background-color: #3a3a4a;
+    border-color: var(--apple-blue);
+}
+
+.search-container i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+main {
+    margin-top: 80px;
+    padding: 2rem;
+}
+
+.meme-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meme-card {
+    background: var(--card-bg);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.meme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.meme-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+.meme-info {
+    padding: 1.5rem;
+}
+
+.meme-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.meme-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1001;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--card-bg);
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 18px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--text-primary);
+}
+
+.meme-details {
+    display: flex;
+    gap: 2rem;
+}
+
+.meme-details img {
+    max-width: 50%;
+    border-radius: 12px;
+}
+
+.rating {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.like-btn, .dislike-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.like-btn:hover {
+    color: var(--apple-blue);
+}
+
+.dislike-btn:hover {
+    color: #ff453a;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem;
+}
+
+    .nav-links {
+        gap: 1.2rem;
+}
+
+    .category-btn {
+        font-size: 1rem;
+    padding: 0.5rem 1rem;
+    }
+
+    .meme-details {
+        gap: 1.5rem;
+}
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .category-btn {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    #searchInput:focus {
+        width: 100%;
+    }
+
+    .meme-details {
+        flex-direction: column;
+    }
+
+    .meme-details img {
+        max-width: 100%;
+        max-height: 50vh;
+    }
+
+    .modal-content {
+        margin: 10% auto;
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .meme-info {
+        padding: 1rem 0;
+    }
+
+    .meme-info h2 {
+        font-size: 1.3rem;
+    }
+
+    .easter-egg {
+        grid-column: 1 / -1;
+        padding: 1.5rem;
+        margin: 1.5rem;
+    }
+
+    .easter-egg img {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .easter-egg h3 {
+        font-size: 1.5rem;
+    }
+
+    .easter-egg p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .search-container {
+        max-width: 100%;
+    }
+
+    .meme-gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .modal-content {
+        margin: 5% auto;
+        padding: 1rem;
+    }
+
+    .close-modal {
+        right: 1rem;
+        top: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .meme-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .rating {
+        justify-content: center;
+    }
+
+    .like-btn, .dislike-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        padding: 0.3rem 0.6rem;
+    }
+
+    .modal-content {
+        margin: 2% auto;
+        max-height: 96vh;
+        overflow-y: auto;
+    }
+
+    .meme-details {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .meme-details img {
+        max-height: 80vh;
+        max-width: 50%;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .navbar {
+        backdrop-filter: saturate(180%) blur(30px);
+    }
+
+    .modal {
+        backdrop-filter: blur(10px);
+    }
+}
+
+.easter-egg {
+    grid-column: 2 / -2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--card-bg) 0%, #3a3a4a 100%);
+    border: 2px solid var(--apple-blue);
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    }
+
+.easter-egg img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.easter-egg .meme-info {
+    width: 100%;
+}
+
+.easter-egg h3 {
+    font-size: 2rem;
+    color: var(--apple-blue);
+    margin-bottom: 1rem;
+}
+
+.easter-egg p {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
